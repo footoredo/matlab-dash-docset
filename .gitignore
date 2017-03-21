@@ -70,3 +70,6 @@ tramp
 
 # cask packages
 .cask/
+
+# test files
+test/

@@ -11,16 +11,24 @@ Here's what you'll need to do:
 
 1. Install [Go][golang], [Dashing][dashing-cli] and [goquery][goquery-github].
 2. Clone this repository.
-3. Copy `dashing.json` and `post-processing.go` to the root of your MATLAB
-   installation's help directory. On a Mac, this is at
-   `/Applications/MATLAB_R2016a.app/help`.
-4. Run `dashing build` from the root of the MATLAB help folder.
-5. Run `go post-processing.go` from the root of the MATLAB help folder.
-6. Add the newly generated `matlab.docset` file to Dash.
 
-If you're using a version of MATLAB other than r2016a, you'll need to edit the
-`dashing.json` file and replace all instances of `r2016a` with whatever your
-version number is.
+3. Run `sh run.sh`, and follow the instructions.
+
+4. Add the newly generated `matlab.docset` file to Dash.
+
+In case it doesn't work, you can do it manually:
+
+1. Install [Go][golang], [Dashing][dashing-cli] and [goquery][goquery-github].
+2. Clone this repository.
+
+3. Copy `dashing.json`, `icon.png` and `post-processing.go` to the root of your MATLAB
+   installation's help directory. On a Mac, this is at
+   `/Applications/MATLAB_R2017a.app/help`.
+4. Replace all `VERSION` in `dashing.json` with your Mathlab version number (e.g. r2017a).
+
+5. Run `dashing build` from the root of the MATLAB help folder.
+6. Run `go run post-processing.go` from the root of the MATLAB help folder.
+7. Add the newly generated `matlab.docset` file to Dash.
 
 [dashing-cli]: https://github.com/technosophos/dashing
 [dash-app]: https://kapeli.com/dash
